@@ -9,9 +9,7 @@ console.log(firstFruitObject(fruits));
 // calories: 52, sugar: 10.3 } }
 */
 
-function firstFruitObject(fruits) {
-    // Your code here
-}
+function firstFruitObject(fruits) {return fruits[0]}
 
 
 
@@ -23,9 +21,7 @@ console.log(lastFruitObject(fruits));
 // 0.2, calories: 30, sugar: 6 } }
 */
 
-function lastFruitObject(fruits) {
-    // Your code here
-}
+function lastFruitObject(fruits) {return fruits[fruits.length-1]}
 
 
 /* 03. `indexFruitObject()` - Return one object at the given index from the
@@ -38,9 +34,7 @@ console.log(indexFruitObject(17, fruits));
 // 0.38, calories: 60, sugar: 13.7 } };
 */
 
-function indexFruitObject(index, fruits) {
-    // Your code here
-}
+function indexFruitObject(index, fruits) {return fruits[index]}
 
 
 /* 04. `fruitNames()` - Return a list of all of the fruit names
@@ -53,9 +47,7 @@ console.log(fruitNames(fruits));
     'Strawberry', 'Tomato', 'Umbu', 'Watermelon' ];
 */
 
-function fruitNames(fruits) {
-    // Your code here
-}
+function fruitNames(fruits) {return fruits.map(x => x.name)}
 
 /* 05. `getFruitKeys()` - Return a list of all of the keys for each fruit record.
 NOTE: Call a function you previously wrote as a helper function.
@@ -64,9 +56,7 @@ NOTE: Call a function you previously wrote as a helper function.
 // // [ 'genus', 'name', 'id', 'family', 'order', 'nutritions' ];
 */
 
-function getFruitKeys(fruits) {
-    // Your code here
-}
+function getFruitKeys(fruits) {return fruits.map(x => Object.keys(x))[0]}
 
 
 /* 06. `getNutritionsKeys()` - Return a list of all of the keys within each
@@ -78,9 +68,7 @@ console.log(getNutritionsKeys(fruits));
 // [ 'carbohydrates', 'protein', 'fat', 'calories', 'sugar' ];
 */
 
-function getNutritionsKeys(fruits) {
-    // Your code here
-}
+function getNutritionsKeys(fruits) {return Object.keys(fruits[0].nutritions)}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

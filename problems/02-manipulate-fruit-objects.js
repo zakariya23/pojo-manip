@@ -8,9 +8,7 @@ console.log(addKeyAndValueToAll(fruits, "inStock", true));
 // returns array of 31 fruits, and each fruit object includes "inStock: true"
 */
 
-function addKeyAndValueToAll(array, key, value) {
-    // Your code here
-}
+function addKeyAndValueToAll(array, key, value) {array.forEach(x => x[key] = value); return array}
 
 /* 08. `addKeyAndValueToOne()` - Return object at the given index array, adding the given key and
 value to that fruit object
@@ -19,9 +17,7 @@ console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
 // returns first object ("Apple"), including "color: red"
 */
 
-function addKeyAndValueToOne(array, key, value, index) {
-    // Your code here
-}
+function addKeyAndValueToOne(array, key, value, index) {array[index][key] = value; return array[index]}
 
 /* 09. `updateKeyName()` - Change the old key name to the new key name in all
 objects, and return the resulting array.
@@ -31,9 +27,8 @@ console.log(updateKeyName(fruits, "nutritions", "nutrition"));
 // returns fruits array, but every "nutritions" key had changed to "nutrition"
 */
 
-function updateKeyName(array, oldKey, newKey) {
-    // Your code here
-}
+function updateKeyName(array, oldKey, newKey) {array.forEach(x => x[newKey] = x[oldKey]); array.forEach(x => delete x[oldKey]); return array}
+
 
 /* 10. `updateIdValues()` - Change all of the "id" values to six-character
 strings, and return an array of all of the new id values.
@@ -48,9 +43,7 @@ console.log(updateIdValues(fruits));
     '000005', '000073', '000025' ];
 */
 
-function updateIdValues(array) {
-    // Your code here
-}
+function updateIdValues(array) {return array.map(x => ('000000'.split('').splice(0,6-x.id.toString().length)).concat(x.id.toString().split('')).join('')) }
 
 /* 11. `deleteKeysandValues()` - Delete the keyToDelete from the nutritions
 object from every fruit, and return the array.
@@ -59,9 +52,7 @@ console.log(deleteKeysAndValues(fruits, "sugar"));
 // returns fruits array, but every "nutritions" key no longer has a "sugar" key
 */
 
-function deleteKeysAndValues(array, keyToDelete) {
-    // Your code here
-}
+function deleteKeysAndValues(array, keyToDelete) {array.forEach(x => delete x.nutritions[keyToDelete]); return array}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
